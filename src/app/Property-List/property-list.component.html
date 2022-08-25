@@ -1,0 +1,40 @@
+<mat-toolbar  color="primary">
+  <span>
+    <a routerLink="/">Property List</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+   <li>
+    <a mat-raised-button routerLinkActive="mat-accent" routerLink="create" id="Add">Add Property</a>
+  </li>
+</ul>
+</mat-toolbar>
+
+
+<table mat-table [dataSource]='dataSource' class="mat-elevation-z8">
+  <ng-container matColumnDef="propertyName">
+    <th mat-header-cell *matHeaderCellDef> propertyName </th>
+    <td mat-cell *matCellDef="let element"> {{element.propertyName}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="propertyDescription">
+    <th mat-header-cell *matHeaderCellDef> propertyDescription </th>
+    <td mat-cell *matCellDef="let element"> {{element.propertyDescription}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="PropertySize">
+    <th mat-header-cell *matHeaderCellDef> PropertySize </th>
+    <td mat-cell *matCellDef="let element"> {{element.PropertySize}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Delete">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let element"><button  mat-raised-button (click)="Delete(element._id)" >Delete</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+

@@ -1,0 +1,32 @@
+<!-- <div class="conatiner">
+  <h1>Add Property</h1>
+  <div>
+    <label>PropertyName</label><br>
+  <input type="text" [(ngModel)]="propertyName" name="PropertyName" class="form-control">
+ <br>
+ <br>
+  <label>propertyDescription</label><br>
+  <input type="text" [(ngModel)]="propertyDescription" name="PropertyDescription" class="form-control">
+  <br><br>
+  <label>PropertySize</label><br>
+  <input type="text" [(ngModel)]="PropertySize" name="PropertySize" class="form-control">
+  </div>
+</div>
+ -->
+
+  <form [formGroup]="form" (submit)="createProperty()">
+<mat-form-field>
+  <input matInput formControlName="propertyName" placeholder="PropertyName " />
+</mat-form-field>
+<mat-form-field>
+  <input matInput formControlName="propertyDescription" placeholder="PropertyDescription" />
+</mat-form-field>
+<mat-form-field>
+  <input matInput formControlName="propertySize" placeholder="PropertySize" />
+</mat-form-field>
+
+<button
+ mat-raised-button
+ color="accent"
+ type="submit">Add Property</button>
+ </form>

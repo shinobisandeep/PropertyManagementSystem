@@ -1,0 +1,7 @@
+table {
+  width: 100%;
+}
+#Add{
+  flex: right;
+  -ms-flex-item-align: end;
+}
