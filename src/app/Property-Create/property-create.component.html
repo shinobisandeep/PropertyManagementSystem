@@ -14,7 +14,7 @@
 </div>
  -->
 
-  <form [formGroup]="form" (submit)="createProperty()">
+<form [formGroup]="form" (submit)="createProperty()">
 <mat-form-field>
   <input matInput formControlName="propertyName" placeholder="PropertyName " />
 </mat-form-field>
@@ -29,4 +29,5 @@
  mat-raised-button
  color="accent"
  type="submit">Add Property</button>
+
  </form>

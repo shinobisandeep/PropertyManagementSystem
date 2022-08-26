@@ -1,5 +1,6 @@
 export interface Property{
-  _id:number;
+  [x: string]: any;
+  _id:string;
   propertyName: string;
   propertyDescription: string;
   propertySize: string;
